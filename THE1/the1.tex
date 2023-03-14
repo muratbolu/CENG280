@@ -67,7 +67,8 @@ Drawing of the nondeterministic finite automaton M:
 \subsection{}
 
 \begin{center}
-Let's formally define the deterministic finite automaton $M'$, which will be equivalent to $M$. We don't need to use $E(q_i)$ notation since there are no empty transitions in our NFA.
+Let's formally define the deterministic finite automaton $M'$, which will be equivalent to $M$.
+We don't need to use $E(q_i)$ notation since there are no empty transitions in our NFA.
 \end{center}
 \begin{equation*}
 M' = (K', \Sigma, \delta', s', F')
@@ -202,13 +203,26 @@ This is not an exhaustive list but one can try every possible combination and se
 \subsection{}
 
 \begin{center}
-Assume $L_2$ is regular. That means $\overline{L_1}$ is also regular. By closure property of complementation of regular languages, $\overline{L_2}$ is also regular. Since $L_2 = \overline{L_1} \Rightarrow \overline{L_2}=\overline{\overline{L_1}} \Rightarrow \overline{L_2}=L_1,\ L_1$ is also regular. This means that by pumping lemma, there is an integer $p \ge 1$ such that any string $w \in L_1$ with $\vert w\vert \ge p$ can be partitioned into $w=xyz$ where $y\neq e, \vert xy\vert \le p$, and $xy^iz \in L_1$ for all $i \ge 0$. Let $w = a^{p+1}b^p \in L_1$. Then $w$ can be written as $xyz$, where $y = a^j$ because of the $\vert xy\vert \leq p$ constraint and $1 \le j \le p$. If we pump down the string by taking $i=0$ in $xy^iz$, the new string $w'$ becomes $w' = xz$. Considering the fact that the number of $a$'s in the string was only one more than the number of $b$'s in the string, pumping down makes the number of $a$'s less than or equal to the number of $b$'s, which makes $w' \notin L1$. This leads to a contradiction, therefore $L_2$ is not regular.
+Assume $L_2$ is regular.
+That means $\overline{L_1}$ is also regular.
+By closure property of complementation of regular languages, $\overline{L_2}$ is also regular.
+Since $L_2 = \overline{L_1} \Rightarrow \overline{L_2}=\overline{\overline{L_1}} \Rightarrow \overline{L_2}=L_1,\ L_1$ is also regular.
+This means that by pumping lemma, there is an integer $p \ge 1$ such that any string $w \in L_1$ with $\vert w\vert \ge p$ can be partitioned into $w=xyz$ where $y\neq e, \vert xy\vert \le p$, and $xy^iz \in L_1$ for all $i \ge 0$.
+Let $w = a^{p+1}b^p \in L_1$.
+Then $w$ can be written as $xyz$, where $y = a^j$ because of the $\vert xy\vert \leq p$ constraint and $1 \le j \le p$.
+If we pump down the string by taking $i=0$ in $xy^iz$, the new string $w'$ becomes $w' = xz$.
+Considering the fact that the number of $a$'s in the string was only one more than the number of $b$'s in the string, pumping down makes the number of $a$'s less than or equal to the number of $b$'s, which makes $w' \notin L1$.
+This leads to a contradiction, therefore $L_2$ is not regular.
 \end{center}
 
 \subsection{}
 
 \begin{center}
-The subset of $L_5$ where $m=n$ and $m \neq 0$ and $n \neq 0$ is equivalent to $L_4$. Therefore $L_4 \cup L_5 = L_5$ by set properties. $L_5$ is regular since it is equivalent to the language of the regular expression $a^*b^*$. $L_6$ is regular since it is a regular expression. Therefore $L_4 \cup L_5 \cup L_6 = L_5 \cup L_6$ which is regular by closure property of union of regular languages.
+The subset of $L_5$ where $m=n$ and $m \neq 0$ and $n \neq 0$ is equivalent to $L_4$.
+Therefore $L_4 \cup L_5 = L_5$ by set properties.
+$L_5$ is regular since it is equivalent to the language of the regular expression $a^*b^*$.
+$L_6$ is regular since it is a regular expression.
+Therefore $L_4 \cup L_5 \cup L_6 = L_5 \cup L_6$ which is regular by closure property of union of regular languages.
 \end{center}
 
 \end{document}
