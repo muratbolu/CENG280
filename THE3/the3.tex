@@ -226,7 +226,11 @@ More specifically:
 \begin{gather*}
 w \in L(M) \Leftrightarrow (s, 1, 0, F) \vdash^*_M (y, x_n, y_n, F_n)
 \end{gather*}
-Let $g: \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{N}$ be a bijection mapping pairs of integers to natural numbers. Let $g(0,0)=0$. We can map the two-dimensional tape to a semi-infinite one-dimensional tape by using $g$. Let $M_s$ be the standard Turing machine with semi-infinite tape that will simulate $M$ which has a two-dimensional tape. Let $M_s$ be formally defined by the quintuple $(K_s, \Sigma_s, \delta_s, s_s, H_s)$, where
+Let $g: \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{N}$ be a bijection mapping pairs of integers to natural numbers.
+Let $g(0,0)=0$.
+We can map the two-dimensional tape to a semi-infinite one-dimensional tape by using $g$.
+Let $M_s$ be the standard Turing machine with semi-infinite tape that will simulate $M$ which has a two-dimensional tape.
+Let $M_s$ be formally defined by the quintuple $(K_s, \Sigma_s, \delta_s, s_s, H_s)$, where
 \begin{gather*}
 K_s = K \\
 \Sigma_s = \Sigma \\
@@ -234,6 +238,7 @@ K_s = K \\
 s_s = s \\
 H_s = H \\
 \end{gather*}
-If $p_1 \in \{\uparrow, \rightarrow, \downarrow, \leftarrow\}$, then the machine $M_s$ moves the head to the appropriate position given by the function $g$. Therefore, the machine $M$ can be simulated by the standard Turing machine $M_s$.
+If $p_1 \in \{\uparrow, \rightarrow, \downarrow, \leftarrow\}$, then the machine $M_s$ moves the head to the appropriate position given by the function $g$.
+Therefore, the machine $M$ can be simulated by the standard Turing machine $M_s$.
 
 \end{document}
